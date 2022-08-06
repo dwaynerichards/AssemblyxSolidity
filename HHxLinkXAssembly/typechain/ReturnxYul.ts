@@ -16,8 +16,8 @@ import { FunctionFragment, Result, EventFragment } from "@ethersproject/abi";
 import { Listener, Provider } from "@ethersproject/providers";
 import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from "./common";
 
-export interface ReturnEthxYulInterface extends utils.Interface {
-  contractName: "ReturnEthxYul";
+export interface ReturnxYulInterface extends utils.Interface {
+  contractName: "ReturnxYul";
   functions: {
     "acceptEth()": FunctionFragment;
   };
@@ -37,13 +37,13 @@ export type EthSentEvent = TypedEvent<[BigNumber], { etherSent: BigNumber }>;
 
 export type EthSentEventFilter = TypedEventFilter<EthSentEvent>;
 
-export interface ReturnEthxYul extends BaseContract {
-  contractName: "ReturnEthxYul";
+export interface ReturnxYul extends BaseContract {
+  contractName: "ReturnxYul";
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
 
-  interface: ReturnEthxYulInterface;
+  interface: ReturnxYulInterface;
 
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,
